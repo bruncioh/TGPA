@@ -11,6 +11,8 @@ public class ShootingScript : MonoBehaviour
 
     public ParticleSystem muzzleFlash;
 
+    public AudioSource shootSound;
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -23,6 +25,7 @@ public class ShootingScript : MonoBehaviour
     {
         RaycastHit raycastHit;
         muzzleFlash.Play();
+        shootSound.Play();
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out raycastHit, range))
         {
             Debug.Log("Pew");
