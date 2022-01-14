@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController playerController;
@@ -15,12 +14,14 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float playerSpeed = 12.0f;
     public float jumpHeight = 3.0f;
+    public float sprintSpeed = 15.0f;
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        CheckGround();
+        //Dash(); 
+        Jump();
     }
 
     private void Move()
@@ -29,11 +30,12 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-        
+
         playerController.Move(move * playerSpeed * Time.deltaTime);
+
     }
 
-    private void CheckGround()
+    private void Jump()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -45,5 +47,7 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         playerController.Move(velocity * Time.deltaTime);
+        
+       
     }
 }
