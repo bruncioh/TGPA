@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637776890372697422
-    m_Hash: 2652942262
+      ticks: 637777529515959356
+    m_Hash: 2493414262
   m_LockFileStatus:
     m_FilePath: C:/Users/poyeb/Documents/GitHub/TGPA/Not Enough Zombies/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637776890372777215
-    m_Hash: 1506807101
+      ticks: 637777529515969332
+    m_Hash: 573504213
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -210,10 +210,12 @@ m_ResolvedPackages:
     - 3.0.6
     - 3.0.7
     - 3.0.9
+    - 3.0.10
     compatible:
     - 3.0.7
     - 3.0.9
-    verified: 3.0.9
+    - 3.0.10
+    verified: 3.0.10
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
