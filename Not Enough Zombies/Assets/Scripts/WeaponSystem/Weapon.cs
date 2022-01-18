@@ -15,17 +15,14 @@ public abstract class Weapon : MonoBehaviour
         AimShoot,
     }
 
+    protected Recoil mRecoil;
+
     protected Camera fpsCam;
 
     protected float mRange = 100.0f;
     protected float mDamage = 10.0f;
     protected double mFireTime;
     protected double mFireDelay = 10.0f;
-
-    protected float mRecoilSpeed = 0.01f;
-    protected Transform mRecoilStart;
-    protected Transform mRecoilEnd;
-    //protected GameObject mModel;
 
     [SerializeField]
     protected WeaponState mState = WeaponState.Default;
@@ -49,8 +46,6 @@ public abstract class Weapon : MonoBehaviour
             if (mFireTime < 0)
             {
                 Shoot();
-                ApplyRecoil();
-                Debug.Log(transform.position);
                 mFireTime += mFireDelay;
             }
         }
@@ -70,7 +65,4 @@ public abstract class Weapon : MonoBehaviour
         }
     }
 
-    protected virtual void ApplyRecoil()
-    {
-    }
 }
