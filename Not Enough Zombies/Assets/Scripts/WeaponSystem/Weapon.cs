@@ -36,7 +36,6 @@ public abstract class Weapon : MonoBehaviour
         fpsCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         mFireDelay = 0.01f;
     }
-    // Update is called once per frame
     protected virtual void Update()
     {
         if (Input.GetMouseButton(0))
