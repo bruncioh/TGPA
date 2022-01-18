@@ -329,7 +329,8 @@
 "Assets/Scripts/PlayerCamController.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/ShootingScript.cs"
-"Assets/Scripts/Weapon.cs"
+"Assets/Scripts/WeaponSystem/AssaultRifle.cs"
+"Assets/Scripts/WeaponSystem/Weapon.cs"
 -langversion:8.0
 
 /deterministic
