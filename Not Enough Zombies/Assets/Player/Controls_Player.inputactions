@@ -22,6 +22,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "Run",
+                    "type": "Button",
+                    "id": "24c3feb4-21a1-4276-9552-caf7f03710cb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "MouseX",
                     "type": "PassThrough",
                     "id": "2c108442-20fc-4a90-befc-ee7ae7995ecb",
@@ -124,6 +132,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseY",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "46809d4a-662e-4c91-b407-bf1aa3905e84",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

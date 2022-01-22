@@ -35,6 +35,14 @@ public class @Controls_Player : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""24c3feb4-21a1-4276-9552-caf7f03710cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""MouseX"",
                     ""type"": ""PassThrough"",
                     ""id"": ""2c108442-20fc-4a90-befc-ee7ae7995ecb"",
@@ -139,6 +147,17 @@ public class @Controls_Player : IInputActionCollection, IDisposable
                     ""action"": ""MouseY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""46809d4a-662e-4c91-b407-bf1aa3905e84"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -149,6 +168,7 @@ public class @Controls_Player : IInputActionCollection, IDisposable
         m_PlayerMovement = asset.FindActionMap("PlayerMovement", throwIfNotFound: true);
         m_PlayerMovement_HorizontalMovement = m_PlayerMovement.FindAction("HorizontalMovement", throwIfNotFound: true);
         m_PlayerMovement_Jump = m_PlayerMovement.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerMovement_Run = m_PlayerMovement.FindAction("Run", throwIfNotFound: true);
         m_PlayerMovement_MouseX = m_PlayerMovement.FindAction("MouseX", throwIfNotFound: true);
         m_PlayerMovement_MouseY = m_PlayerMovement.FindAction("MouseY", throwIfNotFound: true);
     }
@@ -202,6 +222,7 @@ public class @Controls_Player : IInputActionCollection, IDisposable
     private IPlayerMovementActions m_PlayerMovementActionsCallbackInterface;
     private readonly InputAction m_PlayerMovement_HorizontalMovement;
     private readonly InputAction m_PlayerMovement_Jump;
+    private readonly InputAction m_PlayerMovement_Run;
     private readonly InputAction m_PlayerMovement_MouseX;
     private readonly InputAction m_PlayerMovement_MouseY;
     public struct PlayerMovementActions
@@ -210,6 +231,7 @@ public class @Controls_Player : IInputActionCollection, IDisposable
         public PlayerMovementActions(@Controls_Player wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMovement => m_Wrapper.m_PlayerMovement_HorizontalMovement;
         public InputAction @Jump => m_Wrapper.m_PlayerMovement_Jump;
+        public InputAction @Run => m_Wrapper.m_PlayerMovement_Run;
         public InputAction @MouseX => m_Wrapper.m_PlayerMovement_MouseX;
         public InputAction @MouseY => m_Wrapper.m_PlayerMovement_MouseY;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMovement; }
@@ -227,6 +249,9 @@ public class @Controls_Player : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnJump;
+                @Run.started -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnRun;
                 @MouseX.started -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnMouseX;
                 @MouseX.performed -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnMouseX;
                 @MouseX.canceled -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnMouseX;
@@ -243,6 +268,9 @@ public class @Controls_Player : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Run.started += instance.OnRun;
+                @Run.performed += instance.OnRun;
+                @Run.canceled += instance.OnRun;
                 @MouseX.started += instance.OnMouseX;
                 @MouseX.performed += instance.OnMouseX;
                 @MouseX.canceled += instance.OnMouseX;
@@ -257,6 +285,7 @@ public class @Controls_Player : IInputActionCollection, IDisposable
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
         void OnMouseX(InputAction.CallbackContext context);
         void OnMouseY(InputAction.CallbackContext context);
     }

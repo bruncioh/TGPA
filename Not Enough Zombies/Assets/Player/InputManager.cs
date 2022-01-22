@@ -23,6 +23,8 @@ public class InputManager : MonoBehaviour
 
         m_Movement.HorizontalMovement.performed += ctx => m_HorizontalMovement = ctx.ReadValue<Vector2>();
         m_Movement.Jump.performed += _ => m_MovementScript.OnJump();
+        m_Movement.Run.performed += _ => m_MovementScript.OnSprint();
+        m_Movement.Run.canceled += _ => m_MovementScript.OnWalk();
 
         m_Movement.MouseX.performed += ctx => m_MouseInput.x = ctx.ReadValue<float>();
         m_Movement.MouseY.performed += ctx => m_MouseInput.y = ctx.ReadValue<float>();
