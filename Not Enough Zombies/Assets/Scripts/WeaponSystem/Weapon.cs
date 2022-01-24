@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
@@ -14,8 +12,7 @@ public abstract class Weapon : MonoBehaviour
         Aim,
         AimShoot,
     }
-
-    protected Recoil mRecoil;
+    private Recoil mRecoilObject;
 
     protected Camera fpsCam;
 
@@ -24,24 +21,24 @@ public abstract class Weapon : MonoBehaviour
     protected double mFireTime;
     protected double mFireDelay = 10.0f;
 
-    [SerializeField]
-    protected WeaponState mState = WeaponState.Default;
-    [SerializeField]
-    protected ParticleSystem mMuzzleFlash;
-    [SerializeField]
-    protected AudioSource mShootSound;
+    [SerializeField] protected WeaponState mState = WeaponState.Default;
+    [SerializeField] protected ParticleSystem mMuzzleFlash;
+    [SerializeField] protected AudioSource mShootSound;
 
     private void Start()
     {
         fpsCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         mFireDelay = 0.01f;
+        mRecoilObject = GameObject.Find("CameraRotation/CameraRecoil").GetComponent<Recoil>();
     }
+
     protected virtual void Update()
     {
         if (Input.GetMouseButton(0))
         {
             mState = WeaponState.Shoot;
             mFireTime -= Time.deltaTime;
+            mRecoilObject.ApplyRecoil();
             if (mFireTime < 0)
             {
                 Shoot();
@@ -56,7 +53,6 @@ public abstract class Weapon : MonoBehaviour
         mMuzzleFlash.Play();
         mShootSound.Play();
         mShootSound.pitch = Random.Range(8.0f, 9.0f);
-        
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out _, mRange))
         {
             Debug.Log("Pew");

@@ -328,6 +328,7 @@
 "Assets/Easy FPS/Scripts/PlayerMovementScript.cs"
 "Assets/Scripts/PlayerCamController.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Recoil.cs"
 "Assets/Scripts/ShootingScript.cs"
 "Assets/Scripts/WeaponSystem/AssaultRifle.cs"
 "Assets/Scripts/WeaponSystem/Weapon.cs"
