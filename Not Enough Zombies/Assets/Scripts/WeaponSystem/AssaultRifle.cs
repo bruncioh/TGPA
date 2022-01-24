@@ -9,6 +9,9 @@ public class AssaultRifle : Weapon
     {
         mRange = 100.0f;
         mDamage = 50.0f;
+        mMagSize = 20;
+        mFireDelay = 0.125;
+        mAmmo = mMagSize;
     }
 
     protected override void Update()
