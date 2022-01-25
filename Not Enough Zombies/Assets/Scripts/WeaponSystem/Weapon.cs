@@ -2,31 +2,32 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    protected enum WeaponState
+    protected enum WeaponNames
     {
-        Default,
-        Shoot,
-        ShootHold,
-        EmptyMag,
-        Reloading,
-        Aim,
-        AimShoot,
+       None,
+       AssultRifle,
+       Pistol,
+       Shotgun,
+       LaserRifle,
+       SMG,
     }
     private Recoil mRecoilObject;
 
     protected Camera fpsCam;
 
     //Weapon Base Stats
+    protected WeaponNames mWeaponName;
     protected float mRange = 100.0f;
     protected float mDamage = 10.0f;
     protected int mAmmo;
     protected int mMagSize;
-    //
+    protected float mReloadTime;
+    protected bool mIsFullAuto = false;
+
+    //Recoil variables
     [SerializeField] protected double mFireTime = 0;
     protected double mFireDelay;
-    protected float mReloadTime;
-
-    [SerializeField] protected WeaponState mState = WeaponState.Default;
+    
     [SerializeField] protected ParticleSystem mMuzzleFlash;
     [SerializeField] protected AudioSource mShootSound;
 
@@ -34,6 +35,7 @@ public abstract class Weapon : MonoBehaviour
     {
         fpsCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         mRecoilObject = GameObject.Find("CameraRotation/CameraRecoil").GetComponent<Recoil>();
+        mWeaponName = WeaponNames.None;
     }
 
     protected virtual void Update()
@@ -48,7 +50,7 @@ public abstract class Weapon : MonoBehaviour
         else
         {
             //rapid fire if mouse button held
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && mIsFullAuto == true)
             {
                 if (mAmmo > 0)
                 {
@@ -68,7 +70,7 @@ public abstract class Weapon : MonoBehaviour
         {
             mAmmo = mMagSize;
         }
-       
+        //mFireTime = 0;
     }
     protected virtual void Shoot()
     {
