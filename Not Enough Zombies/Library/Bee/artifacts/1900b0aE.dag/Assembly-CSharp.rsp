@@ -326,13 +326,24 @@
 "Assets/Easy FPS/Scripts/GunScript.cs"
 "Assets/Easy FPS/Scripts/MouseLookScript.cs"
 "Assets/Easy FPS/Scripts/PlayerMovementScript.cs"
+<<<<<<< HEAD
 "Assets/Player/CameraController.cs"
 "Assets/Player/Controls_Player.cs"
 "Assets/Player/InputManager.cs"
 "Assets/Player/Movement.cs"
+=======
+"Assets/Scripts/Pistol.cs"
+>>>>>>> Combat
 "Assets/Scripts/PlayerCamController.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Recoil.cs"
 "Assets/Scripts/ShootingScript.cs"
+<<<<<<< HEAD
+=======
+"Assets/Scripts/ShotGun.cs"
+"Assets/Scripts/WeaponSystem/AssaultRifle.cs"
+"Assets/Scripts/WeaponSystem/Weapon.cs"
+>>>>>>> Combat
 -langversion:8.0
 
 /deterministic
