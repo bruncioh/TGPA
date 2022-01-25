@@ -7,6 +7,8 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     private Movement m_MovementScript;
     [SerializeField]
+    private Weapon m_ShootScript;
+    [SerializeField]
     private CameraController m_CameraController;
 
     Controls_Player m_Controls;
@@ -14,6 +16,8 @@ public class InputManager : MonoBehaviour
 
     Vector2 m_HorizontalMovement;
     Vector2 m_MouseInput;
+
+    Coroutine m_Fire;
 
 
     private void Awake()
@@ -25,6 +29,8 @@ public class InputManager : MonoBehaviour
         m_Movement.Jump.performed += _ => m_MovementScript.OnJump();
         m_Movement.Run.performed += _ => m_MovementScript.OnSprint();
         m_Movement.Run.canceled += _ => m_MovementScript.OnWalk();
+        m_Movement.Shoot.started += _ => StartFire();
+        m_Movement.Shoot.canceled += _ => StopFire();
 
         m_Movement.MouseX.performed += ctx => m_MouseInput.x = ctx.ReadValue<float>();
         m_Movement.MouseY.performed += ctx => m_MouseInput.y = ctx.ReadValue<float>();
@@ -44,5 +50,18 @@ public class InputManager : MonoBehaviour
     private void OnDisable()
     {
         m_Controls.Disable();
+    }
+
+    private void StartFire()
+    {
+        m_Fire = StartCoroutine(m_ShootScript.RapitShoot());
+    }
+
+    private void StopFire()
+    {
+        if (m_Fire != null)
+        {
+            StopCoroutine(m_Fire);
+        }
     }
 }

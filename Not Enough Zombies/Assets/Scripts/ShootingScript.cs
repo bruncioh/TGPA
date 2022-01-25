@@ -15,13 +15,11 @@ public class ShootingScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Shoot();
-        }
+        
+
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         RaycastHit raycastHit;
         muzzleFlash.Play();

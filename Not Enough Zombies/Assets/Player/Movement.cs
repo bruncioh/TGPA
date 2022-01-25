@@ -65,10 +65,9 @@ public class Movement : MonoBehaviour
 
     public void OnSprint()
     {
-        if (m_Grounded)
-        {
-            m_Speed = m_RunSpeed;
-        }
+       
+       m_Speed = m_RunSpeed;
+        
     }
     public void OnWalk()
     {

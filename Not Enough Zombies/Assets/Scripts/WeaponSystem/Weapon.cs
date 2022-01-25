@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public abstract class Weapon : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public abstract class Weapon : MonoBehaviour
        LaserRifle,
        SMG,
     }
+    [SerializeField]
     private Recoil mRecoilObject;
 
     protected Camera fpsCam;
@@ -25,7 +27,7 @@ public abstract class Weapon : MonoBehaviour
     protected bool mIsFullAuto = false;
 
     //Recoil variables
-    [SerializeField] protected double mFireTime = 0;
+    [SerializeField] protected float mFireTime = 0;
     protected double mFireDelay;
     
     [SerializeField] protected ParticleSystem mMuzzleFlash;
@@ -34,37 +36,37 @@ public abstract class Weapon : MonoBehaviour
     private void Start()
     {
         fpsCam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        mRecoilObject = GameObject.Find("CameraRotation/CameraRecoil").GetComponent<Recoil>();
+        //mRecoilObject = GameObject.Find("CameraRotation/CameraRecoil").GetComponent<Recoil>();
         mWeaponName = WeaponNames.None;
     }
 
     protected virtual void Update()
     {
         //Fire single Shot if mouse button pressed
-        if (Input.GetButtonDown("Fire1") && mAmmo > 0)
-        {
-            Shoot();
-            mRecoilObject.ApplyRecoil();
-            mAmmo--;
-        }
-        else
-        {
+       // if (Input.GetButtonDown("Fire1") && mAmmo > 0)
+        //{
+        //    Shoot();
+       //     mRecoilObject.ApplyRecoil();
+       //     mAmmo--;
+       // }
+       // else
+       // {
             //rapid fire if mouse button held
-            if (Input.GetMouseButton(0) && mIsFullAuto == true)
-            {
-                if (mAmmo > 0)
-                {
-                    mFireTime -= Time.deltaTime;
-                    if (mFireTime < 0)
-                    {
-                        Shoot();
-                        mRecoilObject.ApplyRecoil();
-                        mFireTime += mFireDelay;
-                    }
-                    mAmmo--;
-                }
-            }
-        }
+           // if (Input.GetMouseButton(0) && mIsFullAuto == true)
+           // {
+              //  if (mAmmo > 0)
+              //  {
+               //     mFireTime -= Time.deltaTime;
+                //    if (mFireTime < 0)
+                 //   {
+                 //       Shoot();
+                  //      mRecoilObject.ApplyRecoil();
+                  //      mFireTime += mFireDelay;
+                  //  }
+                  //  mAmmo--;
+           //     }
+           // }
+      //  }
         //reset ammo
         if (Time.time > mFireDelay && mAmmo == 0)
         {
@@ -72,17 +74,30 @@ public abstract class Weapon : MonoBehaviour
         }
         //mFireTime = 0;
     }
+
     protected virtual void Shoot()
     {
-       
-        mShootSound.pitch = Random.Range(8.0f, 9.0f);
-        mShootSound.Play();
-        mMuzzleFlash.Play();
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out _, mRange))
+        if (mAmmo > 0)
         {
-            Debug.Log(mAmmo);
-            //Debug.Log("Pew");
-            //Debug.Log(mDamage);
+            mShootSound.pitch = Random.Range(0.5f, 0.8f);
+            mShootSound.Play();
+            mRecoilObject.ApplyRecoil();
+            mMuzzleFlash.Play();
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out _, mRange))
+            {
+                Debug.Log(mAmmo);
+                //Debug.Log("Pew");
+                //Debug.Log(mDamage);
+            }
+        }
+    }
+
+    public IEnumerator RapitShoot()
+    {
+        while (true)
+        {
+            Shoot();
+            yield return new WaitForSeconds(mFireTime);
         }
     }
 
