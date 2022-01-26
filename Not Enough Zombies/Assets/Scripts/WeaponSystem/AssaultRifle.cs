@@ -12,7 +12,6 @@ public class AssaultRifle : Weapon
         mMagSize = 20;
         mFireDelay = 0.125;
         mAmmo = mMagSize;
-        mWeaponName = WeaponNames.AssultRifle;
         mIsFullAuto = true;
     }
 

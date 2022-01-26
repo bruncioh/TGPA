@@ -4,7 +4,6 @@ public class Pistol : Weapon
 {
     void Awake()
     {
-        mWeaponName = WeaponNames.Pistol;
         mRange = 100.0f;
         mDamage = 50.0f;
         mMagSize = 10;

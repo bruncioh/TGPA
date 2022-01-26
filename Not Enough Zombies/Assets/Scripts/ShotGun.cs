@@ -11,7 +11,6 @@ public class ShotGun : Weapon
         mFireDelay = 0.225;
         mMagSize = 8;
         mIsFullAuto = false;
-        mWeaponName = WeaponNames.Shotgun;
     }
 
     // Update is called once per frame

@@ -8,10 +8,20 @@ public abstract class Weapon : MonoBehaviour
 
     //Weapon Base Stats
     //protected WeaponNames mWeaponName;
+    protected float mRange = 100.0f;
+    protected float mDamage = 10.0f;
+    protected int mAmmo;
+    protected int mMagSize;
+    protected float mReloadTime;
+    [SerializeField] protected double mFireTime = 0;
+    [SerializeField]protected double mFireDelay;
+    protected RaycastHit mRayHit;
+
     protected bool mIsFullAuto = false;
 
     [SerializeField] protected ParticleSystem mMuzzleFlash;
     [SerializeField] protected AudioSource mShootSound;
+    [SerializeField] protected GameObject mBulletHolePrefab;
 
     private void Start()
     {
@@ -21,7 +31,7 @@ public abstract class Weapon : MonoBehaviour
 
     protected virtual void Update()
     {
-        //Fire single Shot if mouse button pressed
+        ////Fire single Shot if mouse button pressed
         if (Input.GetButtonDown("Fire1") && mAmmo > 0)
         {
             Shoot();
@@ -51,21 +61,26 @@ public abstract class Weapon : MonoBehaviour
         {
             mAmmo = mMagSize;
         }
-        //mFireTime = 0;
+        
     }
     protected virtual void Shoot()
-    {
-       
+    {  
         mShootSound.pitch = Random.Range(8.0f, 9.0f);
         mShootSound.Play();
         mMuzzleFlash.Play();
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out _, mRange))
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out mRayHit, mRange))
         {
-            Debug.Log(mAmmo);
+            //if wall hit spawn bullet hole
+            if (mRayHit.collider.tag == "Wall")
+            {
+                //spawn bullet hole
+                Instantiate(mBulletHolePrefab, mRayHit.point, Quaternion.LookRotation(mRayHit.normal));
+            }
+            //Debug.Log(mAmmo);
             //Debug.Log("Pew");
             //Debug.Log(mDamage);
         }
     }
 
-     
+    
 }

@@ -334,7 +334,6 @@
 "Assets/Scripts/ShotGun.cs"
 "Assets/Scripts/WeaponSystem/AssaultRifle.cs"
 "Assets/Scripts/WeaponSystem/Weapon.cs"
-"Assets/Scripts/_ScriptableObjects/WeaponData.cs"
 -langversion:8.0
 
 /deterministic
