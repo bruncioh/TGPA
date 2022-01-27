@@ -13,12 +13,12 @@ public class AssaultRifle : Weapon
         mFireDelay = 0.125;
         mAmmo = mMagSize;
         mIsFullAuto = true;
+        mReloadTime = 1.0f;
     }
 
     protected override void Update()
     {
         base.Update();
-        
     }
 
     protected override void Shoot()

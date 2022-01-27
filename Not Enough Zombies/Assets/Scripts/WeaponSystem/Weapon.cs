@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public abstract class Weapon : MonoBehaviour
 { 
@@ -14,13 +15,15 @@ public abstract class Weapon : MonoBehaviour
     protected int mMagSize;
     protected float mReloadTime;
     [SerializeField] protected double mFireTime = 0;
-    [SerializeField]protected double mFireDelay;
+    [SerializeField] protected double mFireDelay;
     protected RaycastHit mRayHit;
 
     protected bool mIsFullAuto = false;
+    protected bool mIsReloading = false;
 
     [SerializeField] protected ParticleSystem mMuzzleFlash;
     [SerializeField] protected AudioSource mShootSound;
+    [SerializeField] protected AudioSource mReloadSound;
     [SerializeField] protected GameObject mBulletHolePrefab;
 
     private void Start()
@@ -32,7 +35,7 @@ public abstract class Weapon : MonoBehaviour
     protected virtual void Update()
     {
         ////Fire single Shot if mouse button pressed
-        if (Input.GetButtonDown("Fire1") && mAmmo > 0)
+        if (Input.GetButtonDown("Fire1") && mAmmo > 0 && mIsReloading == false)
         {
             Shoot();
             mRecoilObject.ApplyRecoil();
@@ -41,7 +44,7 @@ public abstract class Weapon : MonoBehaviour
         else
         {
             //rapid fire if mouse button held
-            if (Input.GetMouseButton(0) && mIsFullAuto == true)
+            if (Input.GetMouseButton(0) && mIsFullAuto == true && mIsReloading == false)
             {
                 if (mAmmo > 0)
                 {
@@ -58,7 +61,8 @@ public abstract class Weapon : MonoBehaviour
         }
         if (Input.GetButtonDown("Reload"))
         {
-            Debug.Log("Reeee");
+            Reload();
+            
         }
         //reset ammo
         //if (Time.time > mFireDelay && mAmmo == 0)
@@ -90,6 +94,24 @@ public abstract class Weapon : MonoBehaviour
     }
     protected virtual void Reload()
     {
+        if (mIsReloading == false)
+        {
+            mReloadSound.Play();
+            StartCoroutine(ReloadDelay());
+            Debug.Log("Reloading...");
 
+        }
+    }
+
+    IEnumerator ReloadDelay()
+    {
+        mIsReloading = true;
+        yield return new WaitForSeconds(mReloadTime);
+
+        if (mAmmo >= 0)
+        {
+            mAmmo = mMagSize;
+        }
+        mIsReloading = false;
     }
 }
