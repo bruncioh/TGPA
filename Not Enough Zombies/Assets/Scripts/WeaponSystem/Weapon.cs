@@ -36,7 +36,7 @@ public abstract class Weapon : MonoBehaviour
         {
             Shoot();
             mRecoilObject.ApplyRecoil();
-            mAmmo--;
+            //mAmmo--;
         }
         else
         {
@@ -52,15 +52,20 @@ public abstract class Weapon : MonoBehaviour
                         mRecoilObject.ApplyRecoil();
                         mFireTime += mFireDelay;
                     }
-                    mAmmo--;
+                    //mAmmo--;
                 }
             }
         }
-        //reset ammo
-        if (Time.time > mFireDelay && mAmmo == 0)
+        if (Input.GetButtonDown("Reload"))
         {
-            mAmmo = mMagSize;
+            Debug.Log("Reeee");
         }
+        //reset ammo
+        //if (Time.time > mFireDelay && mAmmo == 0)
+        //{
+        //    //Shoot();
+           
+        //}
         
     }
     protected virtual void Shoot()
@@ -68,6 +73,7 @@ public abstract class Weapon : MonoBehaviour
         mShootSound.pitch = Random.Range(8.0f, 9.0f);
         mShootSound.Play();
         mMuzzleFlash.Play();
+        mAmmo--;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out mRayHit, mRange))
         {
             //if wall hit spawn bullet hole
@@ -76,11 +82,14 @@ public abstract class Weapon : MonoBehaviour
                 //spawn bullet hole
                 Instantiate(mBulletHolePrefab, mRayHit.point, Quaternion.LookRotation(mRayHit.normal));
             }
-            //Debug.Log(mAmmo);
+            Debug.Log(mAmmo);
             //Debug.Log("Pew");
             //Debug.Log(mDamage);
+
         }
     }
+    protected virtual void Reload()
+    {
 
-    
+    }
 }
