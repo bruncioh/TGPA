@@ -19,7 +19,7 @@ public class AssaultRifle : Weapon
     protected override void Update()
     {
         base.Update();
-        
+
     }
 
     protected override void Shoot()

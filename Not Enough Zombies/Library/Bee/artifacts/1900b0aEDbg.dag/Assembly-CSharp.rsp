@@ -105,7 +105,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
--define:ENABLE_LEGACY_INPUT_MANAGER
+-define:ENABLE_INPUT_SYSTEM
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -300,7 +300,10 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
--r:"C:/Users/poyeb/Documents/GitHub/TGPA/Not Enough Zombies/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll"
+-r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"E:/Technical Game Programming/TGPA/Not Enough Zombies/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
@@ -326,10 +329,34 @@
 "Assets/Easy FPS/Scripts/GunScript.cs"
 "Assets/Easy FPS/Scripts/MouseLookScript.cs"
 "Assets/Easy FPS/Scripts/PlayerMovementScript.cs"
+"Assets/Player/CameraController.cs"
+"Assets/Player/Controls_Player.cs"
+"Assets/Player/InputManager.cs"
+"Assets/Player/Movement.cs"
+"Assets/Scripts/AI/BaseAIInherits.cs"
+"Assets/Scripts/AI/BaseRangedEnemyInherits.cs"
+"Assets/Scripts/AI/BaseWizardInherits.cs"
+"Assets/Scripts/AI/BasicAI.cs"
+"Assets/Scripts/AI/DarkHand.cs"
+"Assets/Scripts/AI/DarkOrb.cs"
+"Assets/Scripts/AI/Exploder.cs"
+"Assets/Scripts/AI/FireBall.cs"
+"Assets/Scripts/AI/FireWizard.cs"
+"Assets/Scripts/AI/FollowPlayer.cs"
+"Assets/Scripts/AI/IceWizard.cs"
+"Assets/Scripts/AI/Meteor.cs"
+"Assets/Scripts/AI/Necromancer.cs"
+"Assets/Scripts/AI/SimpleCameraController.cs"
+"Assets/Scripts/AI/SomeSpitter.cs"
+"Assets/Scripts/AI/Spawner1.cs"
+"Assets/Scripts/AI/ThaSpit2.cs"
+"Assets/Scripts/AI/TheHealth.cs"
+"Assets/Scripts/Pistol.cs"
 "Assets/Scripts/PlayerCamController.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/Recoil.cs"
 "Assets/Scripts/ShootingScript.cs"
+"Assets/Scripts/ShotGun.cs"
 "Assets/Scripts/WeaponSystem/AssaultRifle.cs"
 "Assets/Scripts/WeaponSystem/Weapon.cs"
 -langversion:8.0
