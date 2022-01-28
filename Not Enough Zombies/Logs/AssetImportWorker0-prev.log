@@ -15,11 +15,11 @@ C:/Users/poyeb/Documents/GitHub/TGPA/Not Enough Zombies
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64574
+63896
 Successfully changed project path to: C:/Users/poyeb/Documents/GitHub/TGPA/Not Enough Zombies
 C:/Users/poyeb/Documents/GitHub/TGPA/Not Enough Zombies
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.11 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 56.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.17f1 (03b40fe07a36)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/Resources/UnitySubsystems
@@ -35,80 +35,74 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001964 seconds.
+Registered in 0.001961 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 52.02 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 62.55 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.243 seconds
+- Completed reload, in  1.175 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1243ms)
-		BeginReloadAssembly (60ms)
+	ReloadAssembly (1176ms)
+		BeginReloadAssembly (58ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (409ms)
-			LoadAssemblies (58ms)
+		EndReloadAssembly (427ms)
+			LoadAssemblies (56ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (160ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (176ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (194ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (52ms)
+				RefreshPlugins (63ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (89ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
+				ProcessInitializeOnLoadAttributes (96ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004368 seconds.
+Registered in 0.003978 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000020354ECF820 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020353F68020 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020353F90630 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 53.73 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 58.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.169 seconds
+- Completed reload, in  1.168 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1170ms)
+	ReloadAssembly (1168ms)
 		BeginReloadAssembly (147ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (967ms)
-			LoadAssemblies (95ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (964ms)
+			LoadAssemblies (92ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (331ms)
+			SetupTypeCache (328ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (71ms)
-			SetupLoadedEditorAssemblies (379ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (383ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (54ms)
-				BeforeProcessingInitializeOnLoad (69ms)
+				RefreshPlugins (59ms)
+				BeforeProcessingInitializeOnLoad (68ms)
 				ProcessInitializeOnLoadAttributes (235ms)
 				ProcessInitializeOnLoadMethodAttributes (11ms)
 				AfterProcessingInitializeOnLoad (6ms)
@@ -118,15 +112,15 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3154 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 123.2 MB.
-System memory in use after: 123.4 MB.
+Unloading 3169 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 195.6 MB.
+System memory in use after: 195.8 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3612.
-Total: 3.359400 ms (FindLiveObjects: 0.239800 ms CreateObjectMapping: 0.210600 ms MarkObjects: 2.815800 ms  DeleteObjects: 0.091800 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3624.
+Total: 3.035400 ms (FindLiveObjects: 0.244400 ms CreateObjectMapping: 0.213500 ms MarkObjects: 2.518500 ms  DeleteObjects: 0.058200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -141,159 +135,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Easy FPS/Sounds/reloadSound.wav
-  artifactKey: Guid(d85099fefd84d429788e09001413207b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Easy FPS/Sounds/reloadSound.wav using Guid(d85099fefd84d429788e09001413207b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37c05791047b4bd3fb859d6ded97c779') in 0.101552 seconds 
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '128db3343f0e1798257a2e3af912de2d') in 0.020478 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000160 seconds.
-  path: Assets/Easy FPS/Sounds/pullweapon.wav
-  artifactKey: Guid(dbc32fd9a698df44d9a5f6566769c32f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Easy FPS/Sounds/pullweapon.wav using Guid(dbc32fd9a698df44d9a5f6566769c32f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deec97c4d2bcef10ee429b8d0568116b') in 0.026968 seconds 
+  Time since last request: 25.233990 seconds.
+  path: Assets/Scripts/Recoil.cs
+  artifactKey: Guid(aa1229d862e8bd54eae824a481db1923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Recoil.cs using Guid(aa1229d862e8bd54eae824a481db1923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe48c0469f81ffbd6904c1fe36c56f6') in 0.040614 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Easy FPS/Sounds
-  artifactKey: Guid(08db8c7675c354d92bfb2c91b4c88fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Easy FPS/Sounds using Guid(08db8c7675c354d92bfb2c91b4c88fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dbe0a0af21a5f3e4b0817de3a6cb423') in 0.006363 seconds 
+  Time since last request: 0.409132 seconds.
+  path: Assets/Scripts/PlayerCamController.cs
+  artifactKey: Guid(063d06d303320d045ba964750fdfb3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerCamController.cs using Guid(063d06d303320d045ba964750fdfb3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0737aa74b509617a39856c7dc455493') in 0.008937 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000423 seconds.
-  path: Assets/Easy FPS/Sounds/hitMarker.wav
-  artifactKey: Guid(68f790dbfa1f84670a70b81bd91a98e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Easy FPS/Sounds/hitMarker.wav using Guid(68f790dbfa1f84670a70b81bd91a98e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bd7f819c2f1a5c97ad7b29261884954') in 0.022220 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 64.357805 seconds.
-  path: Assets/Easy FPS/MuzzelFlash/Materials/Muzzle04.mat
-  artifactKey: Guid(e1d873dacce903d498e00c89391e4c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Easy FPS/MuzzelFlash/Materials/Muzzle04.mat using Guid(e1d873dacce903d498e00c89391e4c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'debbe338affb949a9a3859dc3b0eab59') in 0.044063 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004095 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-00000203554FC020 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020353E71020 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020354538020 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.040 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1040ms)
-		BeginReloadAssembly (115ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (873ms)
-			LoadAssemblies (88ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (332ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (65ms)
-			SetupLoadedEditorAssemblies (294ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (59ms)
-				ProcessInitializeOnLoadAttributes (212ms)
-				ProcessInitializeOnLoadMethodAttributes (11ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3136 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 125.8 MB.
-System memory in use after: 126.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3656.
-Total: 3.542700 ms (FindLiveObjects: 0.250400 ms CreateObjectMapping: 0.179100 ms MarkObjects: 3.087800 ms  DeleteObjects: 0.024300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005349 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file data-0000020356413E30 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002034FEA3010 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.TextMeshPro.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000020354016020 doesn't match image C:\Users\poyeb\Documents\GitHub\TGPA\Not Enough Zombies\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.275 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1275ms)
-		BeginReloadAssembly (130ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (41ms)
-		EndReloadAssembly (1080ms)
-			LoadAssemblies (104ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (429ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (72ms)
-			SetupLoadedEditorAssemblies (359ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (72ms)
-				ProcessInitializeOnLoadAttributes (256ms)
-				ProcessInitializeOnLoadMethodAttributes (14ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3136 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 125.8 MB.
-System memory in use after: 126.1 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3658.
-Total: 3.994300 ms (FindLiveObjects: 0.352300 ms CreateObjectMapping: 0.259800 ms MarkObjects: 3.349500 ms  DeleteObjects: 0.031200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  Time since last request: 2.915428 seconds.
+  path: Assets/Scripts/WeaponSystem/AssaultRifle.cs
+  artifactKey: Guid(c4c71627bb5f2184e91887c77e19974f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/WeaponSystem/AssaultRifle.cs using Guid(c4c71627bb5f2184e91887c77e19974f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7771ba4b61175e4414595363bd4d64d2') in 0.006552 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
